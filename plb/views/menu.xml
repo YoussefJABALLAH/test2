@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- Top menu item -->
+        <menuitem name="PLB"
+            id="menu_plb_root" action="plb_action" sequence="1"
+            web_icon="plb/static/description/icon.png"/>
+
+</odoo>

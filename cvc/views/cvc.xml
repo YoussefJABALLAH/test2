@@ -1,0 +1,55 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="cvc_tree_view">
+            <field name="name">cvc.tree.view</field>
+            <field name="model">cvc</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="CVC">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="cvc_form_view" model="ir.ui.view">
+            <field name="name">cvc.form.view</field>
+            <field name="model">cvc</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <h1 class="oe_title">
+                            <field name="name"/>
+                        </h1>
+                        <field name="attachment_ids" widget="many2many_binary_custom"/>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="cvc_search" model="ir.ui.view">
+            <field name="name">cvc.search</field>
+            <field name="model">cvc</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="cvc_action">
+            <field name="name">CVC</field>
+            <field name="res_model">cvc</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create the first record
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

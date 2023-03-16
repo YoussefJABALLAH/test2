@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- Top menu item -->
+        <menuitem name="CVC"
+            id="menu_cvc_root" action="cvc_action" sequence="1"/>
+
+</odoo>
